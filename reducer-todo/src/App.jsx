@@ -28,11 +28,13 @@ function App() {
     dispatch({
       type: "COMPLETED",
       index,
-      payload: {
-        task: todo.task,
-        id: todo.id,
-        completed: !todo.completed
-      }
+      payload: [
+        {
+          task: todo.task,
+          id: todo.id,
+          completed: !todo.completed
+        }
+      ]
     });
   };
 
