@@ -8,9 +8,50 @@
 
   form {
     width: 60%;
+    display: flex;
     input {
-      width: 75%;
+      width: 100%;
       padding: 8px;
+    }
+    button {
+      width: max-content;
+      background-color: dodgerblue;
+      border-color: dodgerblue;
+      color: #fff;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: rgb(21, 112, 202);
+        border-color: rgb(21, 112, 202);
+      }
+    }
+  }
+
+  .filter-tab {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    .tab {
+      padding: 24px 0;
+      border-bottom: 1px solid #ddd;
+      text-align: center;
+      flex-basis: 100%;
+      text-transform: capitalize;
+      transition: all 0.2s ease;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #efefef;
+      }
+    }
+
+    .active-tab {
+      border-bottom: 2px solid dodgerblue;
+      color: dodgerblue;
+      font-weight: bold;
     }
   }
 

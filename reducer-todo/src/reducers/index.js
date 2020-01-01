@@ -6,14 +6,30 @@ export const initialState = {
       completed: false
     },
     {
-      task: "Bake Cookies",
+      task: "Code",
       id: 1528817084358,
+      completed: true
+    },
+    {
+      task: "Gym",
+      id: 1528817084359,
+      completed: false
+    },
+    {
+      task: "Sleep",
+      id: 1528817084360,
       completed: true
     }
   ],
+  tabs: [
+    { name: "All" },
+    { name: "Pending" },
+    { name: "Completed" }
+    // { name: "Overdue" }
+  ],
   todo: "",
   searchBox: "",
-  hideCompleted: false
+  currentTab: "All"
 };
 
 export const reducer = (state, action) => {
@@ -30,13 +46,18 @@ export const reducer = (state, action) => {
       // element i.e. object from arr2 if the id is found in
       // the arr2. If not, then the same element in arr1 i.e.
       // obj is returned.
-      const filteredTodos = [...state.todos].map(
+      const completedTodos = [...state.todos].map(
         todo => action.payload.find(o => o.id === todo.id) || todo
       );
-      console.log("FILTERED LIST", filteredTodos);
+      console.log("FILTERED LIST", completedTodos);
       return {
         ...state,
-        todos: [...filteredTodos]
+        todos: [...completedTodos]
+      };
+    case "FILTER":
+      return {
+        ...state,
+        currentTab: action.currentTab
       };
 
     default:
