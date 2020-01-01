@@ -2,6 +2,9 @@ import React, { useReducer } from "react";
 
 import { initialState, reducer } from "./reducers";
 import "./App.scss";
+import Tabs from "./components/Tabs";
+import List from "./components/List";
+import TodoForm from "./components/TodoForm";
 
 function App() {
   const [state, dispatch] = useReducer(reducer, initialState);
@@ -42,33 +45,14 @@ function App() {
 
   return (
     <div className="App">
-      <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={state.todo}
-          onChange={handleChange}
-          placeholder="Write activity here..."
-        />
-        <button type="submit">Submit</button>
-      </form>
-      <ul>
-        {state.todos.map((todo, index) => {
-          return (
-            <li key={index}>
-              <label>
-                <input
-                  type="checkbox"
-                  name="check"
-                  id="check"
-                  defaultChecked={todo.completed}
-                  onChange={() => handleChecked(index, todo)}
-                />
-                {todo.task}
-              </label>
-            </li>
-          );
-        })}
-      </ul>
+      <h1>React ToDo List using useReducer</h1>
+      <TodoForm
+        {...state}
+        handleSubmit={handleSubmit}
+        handleChange={handleChange}
+      />
+      <Tabs {...state} dispatch={dispatch} />
+      <List {...state} handleChecked={handleChecked} />
     </div>
   );
 }
