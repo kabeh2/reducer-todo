@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/reducer-todo/static/css/main.a6a37203.chunk.css",
+    "main.js": "/reducer-todo/static/js/main.bf9b7e93.chunk.js",
+    "main.js.map": "/reducer-todo/static/js/main.bf9b7e93.chunk.js.map",
+    "runtime-main.js": "/reducer-todo/static/js/runtime-main.6915b046.js",
+    "runtime-main.js.map": "/reducer-todo/static/js/runtime-main.6915b046.js.map",
+    "static/js/2.d20f7344.chunk.js": "/reducer-todo/static/js/2.d20f7344.chunk.js",
+    "static/js/2.d20f7344.chunk.js.map": "/reducer-todo/static/js/2.d20f7344.chunk.js.map",
+    "index.html": "/reducer-todo/index.html",
+    "precache-manifest.9f9320e927676f14368db721d3a52a71.js": "/reducer-todo/precache-manifest.9f9320e927676f14368db721d3a52a71.js",
+    "service-worker.js": "/reducer-todo/service-worker.js",
+    "static/css/main.a6a37203.chunk.css.map": "/reducer-todo/static/css/main.a6a37203.chunk.css.map",
+    "static/js/2.d20f7344.chunk.js.LICENSE": "/reducer-todo/static/js/2.d20f7344.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6915b046.js",
+    "static/js/2.d20f7344.chunk.js",
+    "static/css/main.a6a37203.chunk.css",
+    "static/js/main.bf9b7e93.chunk.js"
+  ]
+}
